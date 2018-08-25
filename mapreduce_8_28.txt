@@ -1,0 +1,29 @@
+    1  jps
+    2  su - lime
+    3  su - lime
+    4  nano ~/.bashrc:
+    5  nano~/.bashrc:
+    6  nano ~/.bashrc
+    7  source ~/.bashrc
+    8  su - lime
+    9  cd
+   10  cd MapReduceTutorial
+   11  chmod +r *.*
+   12  cd $HADOOP_HOME/share/hadoop/mapreduce/
+   13  ls
+   14  cd $HADOOP_HOME/share/hadoop/common/
+   15  ls
+   16  cd
+   17  nano .bashrc
+   18  source .bashrc
+   19  cd MapReduceTutorial/
+   20  javac -d . SalesMapper.java SalesCountryReducer.java SalesCountryDriver.java
+   21  nano Manifest.txt
+   22  jar cfm ProductSalePerCountry.jar Manifest.txt SalesCountry/*.class
+   23  ls
+   24  hadoop fs -mkdir /inputMapReduce
+   25  hadoop fs -put SalesJan2009.csv /inputMapReduce
+   26  hadoop jar ProductSalePerCountry.jar /inputMapReduce /mapreduce_output_sales
+   27  hadoop fs -cat /mapreduce_output_sales/part-00000
+   28  cd
+   29  history > mapreduce_8_28.txt
